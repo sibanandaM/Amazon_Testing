@@ -1,12 +1,12 @@
 import time
-
 import pytest
-from Tests.test_base import BaseTest
-from PageObjects.loginPage import LoginPage
-from PageObjects.searchPage import SearchPage
-from PageObjects.cartPage import cartPage
-from PageObjects.addToCartPage import AddToCart
-from PageObjects.productPage import ProductPage
+from tests.test_base import BaseTest
+from pageobjects.loginpage import LoginPage
+from pageobjects.searchpage import SearchPage
+from pageobjects.cartpage import CartPage
+from pageobjects.addtocartpage import AddToCart
+from pageobjects.productpage import ProductPage
+
 
 class Test_RemoveItemFromCart(BaseTest):
 
@@ -21,7 +21,7 @@ class Test_RemoveItemFromCart(BaseTest):
         self.addtocart = AddToCart(self.driver)
         self.addtocart.add_to_cart()
         time.sleep(5)
-        self.cartpage = cartPage(self.driver)
+        self.cartpage = CartPage(self.driver)
         self.cartpage.cart_verify()
         self.cartpage.delete_cart_item()
 

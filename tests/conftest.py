@@ -1,6 +1,7 @@
 import time
 import pytest
-from Base.DriverInitiation import Driver
+from base.driverinitiation import Driver
+
 
 @pytest.fixture(scope="class")
 def init_driver(request):
@@ -13,4 +14,3 @@ def init_driver(request):
     yield driver
     time.sleep(5)
     driver.quit()
-

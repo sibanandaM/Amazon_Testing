@@ -1,8 +1,9 @@
 import pytest
-from Tests.test_base import BaseTest
-from PageObjects.loginPage import LoginPage
-from PageObjects.searchPage import SearchPage
-from PageObjects.productPage import ProductPage
+from tests.test_base import BaseTest
+from pageobjects.loginpage import LoginPage
+from pageobjects.searchpage import SearchPage
+from pageobjects.productpage import ProductPage
+
 
 class Test_ProductResult(BaseTest):
 
@@ -15,4 +16,3 @@ class Test_ProductResult(BaseTest):
         self.productresult = ProductPage(self.driver)
         self.productresult.search_product()
         self.productresult.verify_product_details()
-
