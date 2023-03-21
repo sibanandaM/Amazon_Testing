@@ -3,9 +3,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.common.exceptions import ElementNotVisibleException, ElementNotSelectableException, NoSuchElementException
 from selenium.webdriver.support import expected_conditions as EC
+from utilities.customlogger import custom_logger
 
 
 class ActionPage:
+    log = custom_logger()
+
 
     def __init__(self, driver):
         self.driver = driver
@@ -19,12 +22,15 @@ class ActionPage:
 
         if str(locatortype) == "XPATH":
             WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(xpath)).click()
+            self.log.info("Click on the element ::"+ locatorvalue)
 
         elif str(locatortype) == "ID":
             WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(id)).click()
+            self.log.info("Click on the element ::"+ locatorvalue)
 
         elif str(locatortype) == "NAME":
             WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(name)).click()
+            self.log.info("Click on the element ::"+ locatorvalue)
 
     def sendkeys(self, locatorvalue, locatortype, value):
         xpath = (By.XPATH, locatorvalue)
@@ -33,9 +39,11 @@ class ActionPage:
 
         if str(locatortype) == "XPATH":
             WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(xpath)).send_keys(value)
+            self.log.info("sent key as  ::  " + value)
 
         elif str(locatortype) == "ID":
             WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(id)).send_keys(value)
+            self.log.info("sent key as  ::  " + value)
 
 
         elif str(locatortype) == "NAME":

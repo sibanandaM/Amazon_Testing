@@ -1,0 +1,6 @@
+21/03/23 11:53:59 AM Tuesday - ActionPage - INFO : Click on the element :://span[text()='Hello, sign in']
+21/03/23 11:53:59 AM Tuesday - ActionPage - INFO : sent key as  ::  8310805238
+21/03/23 11:54:01 AM Tuesday - ActionPage - INFO : Click on the element :://input[@id='continue']
+21/03/23 11:54:01 AM Tuesday - ActionPage - INFO : sent key as  ::  Techsophy@123
+21/03/23 11:54:01 AM Tuesday - ActionPage - INFO : Click on the element :://input[@id='signInSubmit']
+21/03/23 11:54:06 AM Tuesday - ActionPage - INFO : Click on the element :://span[@id='nav-cart-count']
