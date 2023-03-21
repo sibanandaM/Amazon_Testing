@@ -9,7 +9,6 @@ from utilities.customlogger import custom_logger
 class ActionPage:
     log = custom_logger()
 
-
     def __init__(self, driver):
         self.driver = driver
         WebDriverWait(self.driver, 25, poll_frequency=1, ignored_exceptions=(
@@ -22,15 +21,15 @@ class ActionPage:
 
         if str(locatortype) == "XPATH":
             WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(xpath)).click()
-            self.log.info("Click on the element ::"+ locatorvalue)
+            self.log.info("Click on the element ::" + locatorvalue)
 
         elif str(locatortype) == "ID":
             WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(id)).click()
-            self.log.info("Click on the element ::"+ locatorvalue)
+            self.log.info("Click on the element ::" + locatorvalue)
 
         elif str(locatortype) == "NAME":
             WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(name)).click()
-            self.log.info("Click on the element ::"+ locatorvalue)
+            self.log.info("Click on the element ::" + locatorvalue)
 
     def sendkeys(self, locatorvalue, locatortype, value):
         xpath = (By.XPATH, locatorvalue)
@@ -60,6 +59,7 @@ class ActionPage:
 
         if str(locatortype) == "XPATH":
             elem_text = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(xpath)).text
+            self.log.info("The inner text of elementis  ::  " + elem_text)
         return elem_text
 
     def window_handle(self, index_num):

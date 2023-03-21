@@ -4,3 +4,10 @@
 21/03/23 11:54:01 AM Tuesday - ActionPage - INFO : sent key as  ::  Techsophy@123
 21/03/23 11:54:01 AM Tuesday - ActionPage - INFO : Click on the element :://input[@id='signInSubmit']
 21/03/23 11:54:06 AM Tuesday - ActionPage - INFO : Click on the element :://span[@id='nav-cart-count']
+21/03/23 11:58:27 AM Tuesday - ActionPage - INFO : Click on the element :://span[text()='Hello, sign in']
+21/03/23 11:58:27 AM Tuesday - ActionPage - INFO : sent key as  ::  8310805238
+21/03/23 11:58:29 AM Tuesday - ActionPage - INFO : Click on the element :://input[@id='continue']
+21/03/23 11:58:29 AM Tuesday - ActionPage - INFO : sent key as  ::  Techsophy@123
+21/03/23 11:58:29 AM Tuesday - ActionPage - INFO : Click on the element :://input[@id='signInSubmit']
+21/03/23 11:58:34 AM Tuesday - ActionPage - INFO : Click on the element :://span[@id='nav-cart-count']
+21/03/23 11:58:34 AM Tuesday - ActionPage - INFO : The inner text of elementis  ::  Your Amazon Cart is empty.
